@@ -4,20 +4,16 @@
 #include "ModulesApp.h"
 #include "MooseSyntax.h"
 
-template <>
 InputParameters
-validParams<TMAPApp>()
+TMAPApp::validParams()
 {
-  InputParameters params = validParams<MooseApp>();
-  return params;
+  return MooseApp::validParams();
 }
 
 TMAPApp::TMAPApp(InputParameters parameters) : MooseApp(parameters)
 {
   TMAPApp::registerAll(_factory, _action_factory, _syntax);
 }
-
-TMAPApp::~TMAPApp() {}
 
 void
 TMAPApp::registerAll(Factory & f, ActionFactory & af, Syntax & s)
@@ -33,6 +29,24 @@ void
 TMAPApp::registerApps()
 {
   registerApp(TMAPApp);
+}
+
+const InputParameters &
+TMAPApp::getCommonParameters() const
+{
+  if (!_common_params.get())
+    mooseError("Common parameters being retrieved before being set.");
+
+  return *_common_params;
+}
+
+void
+TMAPApp::setCommonParameters(const InputParameters & common_params)
+{
+  if (_common_params)
+    mooseError("Common parameters already set");
+
+  _common_params = &common_params;
 }
 
 /***************************************************************************************************
