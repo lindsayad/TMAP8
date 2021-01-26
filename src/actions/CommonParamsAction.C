@@ -1,4 +1,5 @@
 #include "CommonParamsAction.h"
+#include "TMAPApp.h"
 
 registerMooseAction("MooseApp", CommonParamsAction, "meta_action");
 

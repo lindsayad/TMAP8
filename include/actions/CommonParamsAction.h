@@ -7,7 +7,7 @@ class CommonParamsAction : public Action
 public:
   static InputParameters validParams();
 
-  CommonParamsAction(InputParameters parameters);
+  CommonParamsAction(const InputParameters & parameters);
 
 protected:
   void act() override;

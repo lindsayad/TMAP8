@@ -16,11 +16,13 @@ TMAPApp::TMAPApp(InputParameters parameters) : MooseApp(parameters)
 }
 
 void
-TMAPApp::registerAll(Factory & f, ActionFactory & af, Syntax & s)
+TMAPApp::registerAll(Factory & f, ActionFactory & af, Syntax & syntax)
 {
-  ModulesApp::registerAll(f, af, s);
+  ModulesApp::registerAll(f, af, syntax);
   Registry::registerObjectsTo(f, {"TMAPApp"});
   Registry::registerActionsTo(af, {"TMAPApp"});
+
+  registerSyntax("CommonParamsAction", "TMAP");
 
   /* register custom execute flags, action syntax, etc. here */
 }
@@ -34,7 +36,7 @@ TMAPApp::registerApps()
 const InputParameters &
 TMAPApp::getCommonParameters() const
 {
-  if (!_common_params.get())
+  if (!_common_params)
     mooseError("Common parameters being retrieved before being set.");
 
   return *_common_params;
