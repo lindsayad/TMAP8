@@ -1,3 +1,6 @@
 [submodule "moose"]
 	path = moose
 	url = https://github.com/idaholab/moose
+[submodule "thm"]
+	path = thm
+	url = git@gitlab.software.inl.gov:idaholab/thm.git
