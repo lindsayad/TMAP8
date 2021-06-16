@@ -1,4 +1,4 @@
-temperature=2.373e3
+top_level_temperature=2.373e3
 initial_pressure=1e6
 kb=1.38e-23
 length_unit=1e6 # number of length units in a meter
@@ -15,7 +15,7 @@ pressure_unit=1 # number of pressure units in a Pascal
   [diff]
     type = MatDiffusion
     variable = u
-    diffusivity = ${fparse 1.58e-4*exp(-308000/(8.314*temperature))*length_unit^2}
+    diffusivity = ${fparse 1.58e-4*exp(-308000/(8.314*top_level_temperature))*length_unit^2}
   []
   [time]
     type = TimeDerivative
@@ -31,10 +31,10 @@ pressure_unit=1 # number of pressure units in a Pascal
   [flux_sink]
     type = EnclosureSinkScalarKernel
     variable = v
-    flux = scale_flux
+    flux = flux
     surface_area = ${fparse 2.16e-6*length_unit^2}
     volume = ${fparse 5.2e-11*length_unit^3}
-    concentration_to_pressure_conversion_factor = ${fparse kb*length_unit^3*temperature*pressure_unit}
+    concentration_to_pressure_conversion_factor = ${fparse kb*length_unit^3*top_level_temperature*pressure_unit}
   []
 []
 
@@ -50,8 +50,8 @@ pressure_unit=1 # number of pressure units in a Pascal
     variable = u
     enclosure_scalar_var = v
     boundary = 'left'
-    K = ${fparse 7.244e22/(temperature * length_unit^3 * pressure_unit)}
-    temp = ${temperature}
+    K = ${fparse 7.244e22/(top_level_temperature * length_unit^3 * pressure_unit)}
+    temperature = ${top_level_temperature}
   []
 []
 
@@ -69,7 +69,7 @@ pressure_unit=1 # number of pressure units in a Pascal
   [flux]
     type = SideDiffusiveFluxIntegral
     variable = u
-    diffusivity = ${fparse 1.58e-4*exp(-308000/(8.314*temperature))*length_unit^2}
+    diffusivity = ${fparse 1.58e-4*exp(-308000/(8.314*top_level_temperature))*length_unit^2}
     boundary = 'left'
     execute_on = 'initial nonlinear linear timestep_end'
     outputs = ''
@@ -85,10 +85,10 @@ pressure_unit=1 # number of pressure units in a Pascal
     type = PressureReleaseFluxIntegral
     variable = u
     boundary = 'right'
-    diffusivity = ${fparse 1.58e-4*exp(-308000/(8.314*temperature))*length_unit^2}
+    diffusivity = ${fparse 1.58e-4*exp(-308000/(8.314*top_level_temperature))*length_unit^2}
     surface_area = ${fparse 2.16e-6*length_unit^2}
     volume = ${fparse 5.2e-11*length_unit^3}
-    concentration_to_pressure_conversion_factor = ${fparse kb*length_unit^3*temperature*pressure_unit}
+    concentration_to_pressure_conversion_factor = ${fparse kb*length_unit^3*top_level_temperature*pressure_unit}
     outputs = 'console'
   []
   [rhs_aggregate]

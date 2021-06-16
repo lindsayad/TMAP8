@@ -21,7 +21,7 @@ protected:
   ADReal computeQpResidual() override;
 
   /// The equilibrium coefficient
-  const Real _K;
+  const Function & _K;
 
   const Real _p;
 

@@ -10,6 +10,7 @@
 #include "Moose.h"
 #include "AppFactory.h"
 #include "ModulesApp.h"
+#include "THMApp.h"
 #include "MooseSyntax.h"
 
 template <>
@@ -34,6 +35,7 @@ TMAPApp::~TMAPApp() {}
 void
 TMAPApp::registerAll(Factory & f, ActionFactory & af, Syntax & s)
 {
+  THMApp::registerAll(f, af, s);
   ModulesApp::registerAll(f, af, s);
   Registry::registerObjectsTo(f, {"TMAPApp"});
   Registry::registerActionsTo(af, {"TMAPApp"});
