@@ -28,7 +28,6 @@ TMAP8 also contains [example cases](examples/tmap_index.md), which showcase how 
 | ver-1ic   | [Species Equilibration Problem in Surfdep Conditions with Low Barrier Energy](ver-1ic.md)           |
 | ver-1id   | [Species Equilibration Problem in Surfdep Conditions with High Barrier Energy](ver-1id.md)          |
 | ver-1ie   | [Species Equilibration Problem in Lawdep Conditions with Equal Starting Pressures](ver-1ie.md)      |
-| ver-1if   | [Species Equilibration Problem in Lawdep Conditions with Unequal Starting Pressures](ver-1if.md)    |
 | ver-1ja   | [Radioactive Decay of Mobile Tritium in a Slab](ver-1ja.md)                                         |
 | ver-1jb   | [Radioactive Decay of Mobile Tritium in a Slab with a Distributed Trap Concentration](ver-1jb.md)   |
 | ver-1ka   | [Simple Volumetric Source](ver-1ka.md)                                                              |
@@ -44,10 +43,11 @@ TMAP8 also contains [example cases](examples/tmap_index.md), which showcase how 
 
 # List of benchmarking cases
 
-| Case    | Title                                                                              |
-| ------- | ---------------------------------------------------------------------------------- |
-| ver-1fc | [Conduction in Composite Structure with Constant Surface Temperatures](ver-1fc.md) |
-| fuel cycle 1 | [Tritium fuel cycle in fusion energy plant](examples/fuel_cycle_Abdou/index.md) from [!cite](Abdou2021) |
+| Case         | Title                                                                                                                 |
+| ------------ | --------------------------------------------------------------------------------------------------------------------- |
+| ver-1fc      | [Conduction in Composite Structure with Constant Surface Temperatures](ver-1fc.md)                                    |
+| ver-1if      | [Species Equilibration Problem in Lawdep Conditions with Unequal Starting Pressures](ver-1if.md)                      |
+| fuel cycle 1 | [Tritium fuel cycle in fusion energy plant](examples/fuel_cycle_Abdou/index.md) from [!cite](Abdou2021)               |
 | fuel cycle 2 | [Tritium fuel cycle in fusion energy plant](examples/fuel_cycle_Meschini/index.md) from [!cite](meschini2023modeling) |
 
 
