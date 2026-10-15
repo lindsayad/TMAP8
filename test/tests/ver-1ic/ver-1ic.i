@@ -19,11 +19,11 @@ peq_AB = '${units ${fparse 2 * ${p0_A2} * ${p0_B2} / ( ${p0_A2} + ${p0_B2} )} Pa
 E_x = '${units 0.05 eV -> J}'
 E_c = '${units -0.01 eV -> J}'
 E_b = '${units 0.00 eV -> J}'
-nu = '${units 8.4e12 m/s}' # Debye frequency
+nu = '${units 8.4e12 1/s}' # Debye frequency
 M = '${units ${fparse 2 * amu} kg}'
 K_d = '${units ${fparse 1 / sqrt(2 * pi * ${M} * ${k} * ${T}) * exp( - ${E_x} / ( ${k} * ${T} ) )} s/kg/m}' # deposition rate
-K_r = '${units ${fparse ${nu} * exp(( ${E_c} - ${E_x} ) / ${k} / ${T})} m/s}' # release rate
-K_b = '${units ${fparse ${nu} * exp( - E_b / ${k} / ${T} ) } m/s}' # dissociation rate
+K_r = '${fparse ${nu} * exp((${E_c} - ${E_x}) / ${k} / ${T})}' # release rate
+K_b = '${fparse ${nu} * exp(- E_b / ${k} / ${T})}' # dissociation rate
 D_s_lamda = '${units ${fparse 5.3167e-7 * exp( -4529 / ${T} )} m^4/at/s}'
 
 
