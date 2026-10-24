@@ -2,6 +2,8 @@ For [software quality assurance](sqa/index.md exact=True) purposes, TMAP8 underg
 
 Note that in addition to monitoring TMAP8 performance and reproducibility in verification and validation cases, the effects of changes made to TMAP8 are tracked. A series of automated tests are performed via continuous integration using [CIVET](https://civet.inl.gov/repo/530) to help identify any changes in TMAP8's predictions, therefore ensuring stability and robustness. When adding a new verification case, be sure to follow the [verification and validation standards](verification_and_validation_standards.md).
 
+The two main publications describing the verification and validation of TMAP8 are [!cite](Simon2025) and [!cite](Simon2027). [!cite](Simon2025) describes the scope of TMAP8, its SQA approach, and the V&V cases from TMAP4 as well as the fuel cycle benchmark against [!cite](Abdou2021). [!cite](Simon2027) extends the former with additional verification, validation, and benchmarking cases beyond TMAP7's, from the component scale to the fuel cycle scale.
+
 TMAP8 also contains [example cases](examples/tmap_index.md), which showcase how TMAP8 can be used. Finally, for more references of TMAP8 usage, a list of publications supporting TMAP8 development can be found [here](publications.md).
 
 # List of verification cases
