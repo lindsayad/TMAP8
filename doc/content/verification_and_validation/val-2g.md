@@ -4,7 +4,7 @@
 
 ## Case Description
 
-This case reproduces the analysis published in [!cite](yang2026elucidating), which proposed a new model that accurately reproduces deuterium transport in a proton-conducting ceramics in both dry and wet environment. This TMAP8 case is published in [!cite](Simon2027).
+This case reproduces the analysis published in [!cite](yang2026elucidating), which proposed a new model that accurately reproduces deuterium transport in a proton-conducting ceramics in both dry and wet environment.
 This validation effort involves deuterium gas (D$_2$) and heavy water (D$_2$O) transport in proton-conducting ceramics (PCC), specifically yttrium-doped barium zirconate (BaZr$_{0.9}$Y$_{0.1}$O$_{2.95}$, also known as BZY10). The experimental data used for validation comes from thermal desorption spectroscopy (TDS) measurements performed by Hossain et al. [!citep](hossain2022comparative). The primary objective is to understand and model the mechanisms of hydrogen isotope transport in PCC materials, which are of interest for tritium extraction systems in fusion energy applications.
 
 In proton-conducting ceramics, hydrogen isotopes are transported as protonic defects (OD$^{\bullet}$) through a hopping mechanism between oxygen sites in the crystal lattice. Unlike metals where hydrogen diffuses as interstitial atoms, hydrogen in PCC is incorporated into the oxygen sublattice. This case models the TDS experiment where a BZY10 sample (0.5 mm thick, 7.7 mm $\times$ 2.2 mm surface area) is exposed to either D$_2$ gas (dry condition) or D$_2$O vapor (wet condition), followed by thermal desorption analysis.
