@@ -33,7 +33,7 @@ P_{AB}  = \frac{2 P_{A_2}^0 P_{B_2}^0}{P_{A_2}^0 + P_{B_2}^0} \left(1 - \exp \le
 where $\tau$ is the saturation time constant. $\tau$ is selected as 0.123 to match the numerical solution in [eq:lawdep:analytical_solution].
 
 !alert note title= No exact analytical solution
-Because [eq:lawdep:equation_p_ab_final] is a complex nonlinear function, we have no exact analytical solution to compare against. Although presented as a verification case in [!cite](ambrosek2008verification) this is therefore not a true verification case as no analytical solution is currently available for direct comparison. Instead, we compare the numerical solution provided by TMAP8 against an adapted analytical solution from [ver-1ia](ver-1ia.md) and we benchmark the TMAP8 predictions against the TMAP7 results from [!cite](ambrosek2008verification). This is, in essence, a code-to-code benchmarking case.
+Because [eq:lawdep:equation_p_ab_final] is a complex nonlinear function, we have no exact analytical solution to compare against. Although presented as a verification case in [!cite](ambrosek2008verification) this is, therefore, not a true verification case, as no analytical solution is currently available for direct comparison. Instead, we compare the numerical solution provided by TMAP8 against an adapted analytical solution from [ver-1ia](ver-1ia.md), and we benchmark the TMAP8 predictions against the TMAP7 results from [!cite](ambrosek2008verification). This is, in essence, a code-to-code benchmarking case.
 
 
 ## Results

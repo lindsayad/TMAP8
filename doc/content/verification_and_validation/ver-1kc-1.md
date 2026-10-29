@@ -4,7 +4,7 @@
 
 ## General Case Description
 
-Two enclosures are separated by a membrane that allows diffusion according to Sievert's law, with no volumetric source present. Enclosure 2 has twice the volume of Enclosure 1. The system of two enclosures is illustrated in [ver-1kc-1_schematic].
+Two enclosures are separated by a membrane that allows diffusion according to Sieverts' law, with no volumetric source present. Enclosure 2 has twice the volume of Enclosure 1. The system of two enclosures is illustrated in [ver-1kc-1_schematic].
 
 !media figures/ver-1k_schematic.png
     style=width:50%;margin-bottom:2%;margin-left:auto;margin-right:auto

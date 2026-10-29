@@ -4,7 +4,7 @@
 
 ## General Case Description
 
-This problem involves two enclosures connected by a diffusive membrane that follows Sieverts law for diffusion. Both enclosures contain hydrogen (H$_2$), tritium (T$_2$), and tritium gas (HT). In the first enclosure, there is an initial inventory of only hydrogen (H$_2$) along with a constant volumetric source rate of tritium (T$_2$). The second enclosure starts out empty. The system of two enclosures is illustrated in [ver-1ka_schematic].
+This problem involves two enclosures connected by a diffusive membrane that follows Sieverts' law for diffusion. Both enclosures contain hydrogen (H$_2$), tritium (T$_2$), and tritium gas (HT). In the first enclosure, there is an initial inventory of only hydrogen (H$_2$) along with a constant volumetric source rate of tritium (T$_2$). The second enclosure starts out empty. The system of two enclosures is illustrated in [ver-1ka_schematic].
 
 !media figures/ver-1k_schematic.png
     style=width:50%;margin-bottom:2%;margin-left:auto;margin-right:auto
