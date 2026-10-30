@@ -215,6 +215,12 @@ diffusivity_e_prefactor = '${units ${diffusivity_e_prefactor_m2s} m^2/s -> mum^2
   type = ReferenceResidualProblem
   extra_tag_vectors = 'ref'
   reference_vector = 'ref'
+  # The residuals of these variables stagnate at round-off floors above nl_abs_tol, so they get
+  # their own absolute tolerances, set about ten times above the floor seen in the solve
+  variable_nl_abs_tol = 'Oxygen_vacancy_concentration_dry 3e-5
+                         Oxygen_vacancy_concentration_wet 3e-5
+                         electron_concentration_dry 3e-4
+                         electron_concentration_wet 1e-5'
 []
 
 [Kernels]
@@ -1023,7 +1029,7 @@ diffusivity_e_prefactor = '${units ${diffusivity_e_prefactor_m2s} m^2/s -> mum^2
   petsc_options_iname = '-pc_type -snes_type'
   petsc_options_value = 'lu vinewtonrsls'
   nl_rel_tol = 1e-7
-  nl_abs_tol = 3e-4
+  nl_abs_tol = 1e-6
   end_time = ${endtime}
   automatic_scaling = true
   compute_scaling_once = true
